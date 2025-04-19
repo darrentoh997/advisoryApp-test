@@ -2,6 +2,7 @@
 
 Before starting the Server, ensure that your terminal is in the right directory
 Ensure that your node version is v18.17.0 to ensure a smooth installation experience
+Password of the accounts are "123456"
 
 Prequisite:
 
