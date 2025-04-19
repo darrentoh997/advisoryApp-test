@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "1f502dc2-b4e9-405a-b46e-cc94025004aa",
+		"name": "AdvisoryApps-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44237290"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "320"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"140-sRq/rIWR3y6Z7JsXyg/tabTToBU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 19 Apr 2025 12:09:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Logged in\",\n    \"result\": {\n        \"user_id\": 2,\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX3R5cGUiOiJ1IiwiaWF0IjoxNzQ1MDY0NTczLCJleHAiOjE3NDUxNTA5NzN9.AYiTjifoh0PhvaQTBQy5Femb3GHc_XKrgyRlQ1cj30c\",\n        \"token_type\": \"Bearer\",\n        \"role_type\": \"u\",\n        \"expires_at\": \"2025-04-19T13:09:33.385Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "localhost:3000/listing/get?latitude=3.12112&longitude=101.67905",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX3R5cGUiOiJ1IiwiaWF0IjoxNzQ1MDY0NTczLCJleHAiOjE3NDUxNTA5NzN9.AYiTjifoh0PhvaQTBQy5Femb3GHc_XKrgyRlQ1cj30c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/listing/get?latitude=3.12112&longitude=101.67905",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"listing",
+						"get"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "3.12112"
+						},
+						{
+							"key": "longitude",
+							"value": "101.67905"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlX3R5cGUiOiJ1IiwiaWF0IjoxNzQ1MDY0NTczLCJleHAiOjE3NDUxNTA5NzN9.AYiTjifoh0PhvaQTBQy5Femb3GHc_XKrgyRlQ1cj30c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/listing/get?latitude=3.12112&longitude=101.67905",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"listing",
+								"get"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "3.12112"
+								},
+								{
+									"key": "longitude",
+									"value": "101.67905"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "206"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ce-cc6GeDp4x/6/FsnLC+abVOM85Ks\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 19 Apr 2025 12:25:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"result\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 2,\n                \"name\": \"Marina Bay Sands\",\n                \"created_at\": \"2025-04-19T12:17:18.000Z\",\n                \"updated_at\": \"2025-04-19T12:17:18.000Z\",\n                \"distance\": \"317.39\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
